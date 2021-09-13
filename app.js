@@ -7,6 +7,7 @@ const productRoutes = require("./routes/product.js");
 const orderRoutes = require("./routes/order.js");
 const authRoutes = require("./routes/auth.js");
 const sellerRoutes = require("./routes/seller.js");
+const paymentRoutes = require("./routes/payment.js");
 const errorHandler = require("./middleware/errorHandler.js");
 
 const app = express();
@@ -19,6 +20,7 @@ app.use("/product", productRoutes);
 app.use("/orders", orderRoutes);
 app.use("/auth", authRoutes);
 app.use("/seller", sellerRoutes);
+app.use("/payment", paymentRoutes);
 app.use(errorHandler);
 
 //Database initiation
